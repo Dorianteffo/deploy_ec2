@@ -5,7 +5,6 @@ on:
         branches: 
             - master 
 
-
 jobs: 
     deploy_ec2:
         name: deploy_to_EC2
