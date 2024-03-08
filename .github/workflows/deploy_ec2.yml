@@ -1,0 +1,25 @@
+name: deploy_to_ec2
+
+on: 
+    push: 
+        branches: 
+            - master 
+
+
+jobs: 
+    deploy_ec2:
+        name: deploy_hadoop_to_EC2
+        runs-on: ubuntu-latest
+
+        steps: 
+            - name: Checkout repo 
+              uses: actions/checkout@v2
+
+            - name: Deploy server
+              uses: easingthemes/ssh-deploy@main
+              env:
+                SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+                REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+                REMOTE_USER: ${{ secrets.REMOTE_USER }}
+                SOURCE: "./"
+                TARGET: "/home/ubuntu/test_folder"
