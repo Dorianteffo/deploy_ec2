@@ -8,7 +8,7 @@ on:
 
 jobs: 
     deploy_ec2:
-        name: deploy_hadoop_to_EC2
+        name: deploy_to_EC2
         runs-on: ubuntu-latest
 
         steps: 

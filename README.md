@@ -13,4 +13,4 @@ REMOTE_HOST: Get this by running `make ec2-dns` in the project directory.
 REMOTE_USER: The value for this is ubuntu.
 
 
-Then with a simple `git push` the magic operate (we should set the Github actions workflow to run on pull request, but this just a POC)
+Then with a simple `git push` the magic operate (we should set the Github actions workflow to run on pull request, but this is just a POC)
