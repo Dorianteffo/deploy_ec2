@@ -7,7 +7,7 @@ terraform {
   }
     backend "s3" {
     bucket = "iac-dorian-tf-state"
-    key    = "state-deploy-EC2"
+    key    = "state-deploy-EC2/terraform.tfstate"
     region = "eu-west-3"
   }
 }
